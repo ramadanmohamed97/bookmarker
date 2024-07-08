@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookmarker</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Capriola&family=Fredericka+the+Great&family=Ysabeau+Office:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="./css/all.min.css"/>
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+    <!-- BookMarker effect  -->
+    <main class="py-3">
+        <section id="bookmark" class="bookmark content-adjust p-3 p-sm-5">
+            <div class="title d-flex flex-column gap-5 justify-content-center align-items-center text-center">
+                <h1 class="demo" title="bookmark">
+                    <span style="--i: 1">B</span>
+                    <span style="--i: 2">O</span>
+                    <span style="--i: 3">O</span>
+                    <span style="--i: 4">K</span>
+                    <span style="--i: 5">M</span>
+                    <span style="--i: 6">A</span>
+                    <span style="--i: 7">R</span>
+                    <span style="--i: 8">K</span>
+                    <span style="--i: 9">E</span>
+                    <span style="--i: 10">R</span>
+                </h1>
+                <!-- end   -->
+                <!-- h2  -->
+                <h2>
+                    "Quickly return to the sites you love." <i class="fa-brands fa-gratipay"></i>
+                </h2>
+            </div>
+            <!-- end  -->
+    
+            <!-- Name input  -->
+            <div class="bookmarkInputs mt-3 d-flex flex-column align-items-center justify-content-center gap-md-3">
+                <div class="input w-100">
+                    <label for="bookmarkName"><i class="fa-solid fa-heart"></i> Name</label>
+                    <input type="text" id="siteName" class="form-control mt-2" placeholder="Bookmark Name" />
+                </div>
+                <!-- end Name input  -->
+                <!-- url input  -->
+                <div class="input pt-3 w-100">
+                    <label for="bookmarkURL"><i class="fa-solid fa-link"></i> URL</label>
+                    <input type="text" id="siteUrl" class="form-control mt-2" placeholder="Website URL" />
+                </div>
+                <!-- end url input  -->
+                <!-- buttons  -->
+                <button id="submitBtn" class="common-btn px-5 my-4  d-block mx-auto ">
+                    Add bookmark
+                </button>
+    
+                <button id="updateBtn" class="common-btn px-5 my-4 d-block mx-auto d-none" onclick="finalUpdate()">
+                    update bookmark
+                </button>
+            </div>
+            <!-- end buttons  -->
+            <!-- search  -->
+            <div class="search d-flex align-items-center">
+                <input id="search" type="search" class="form-control"
+                    placeholder="find what you're looking for by site name" />
+            </div>
+        </section>
+        <!-- end search  -->
+        <!-- start table  -->
+        <section id="displayTable" class="content-adjust pt-2 px-3 px-sm-5">
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <!-- end table  -->
+                <!-- loop content js  -->
+                <tbody id="bookmarkContent">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>Hello</td>
+                        <td><button class="btn btn-primary">Visit </button></td>
+                        <td><a class="btn btn-success" href="update"></a></td>
+                        <td><button class="btn btn-danger">Delete</button></td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+
+
+
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>
